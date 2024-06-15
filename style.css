@@ -395,7 +395,7 @@ padding: -100px;
   }
   .about_me {
     padding: 10px;
-    margin-right: 10px;
+
     display: block;
   }
   .about_me .ctext{
@@ -500,9 +500,9 @@ height: 20%;
 }
 #btn1
 {
-  margin: -110px;
+  margin: -10px;
 margin-top: 1px;
-margin-left:-110%;
+margin-left:-85%;
 margin-bottom: 10px;
 }
 .image-container{
