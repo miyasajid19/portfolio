@@ -1,0 +1,401 @@
+/* General styles */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #080808;
+  color: wheat;
+}
+
+a {
+  text-decoration: none;
+  color: wheat;
+  position: relative;
+}
+
+.header {
+  padding: 10px 126.875px;
+  font-size: 26px;
+  background: black;
+}
+
+.container {
+  display: inline-flex;
+}
+
+.nav {
+  float: right;
+  margin-left: 500px;
+}
+
+.nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: -100%;
+  transition: left 0.3s ease-in-out;
+}
+
+.nav ul li a:hover::after {
+  left: 0;
+}
+
+.nav ul li a:hover::after,
+.nav ul li a::after {
+  left: 0;
+  width: 100%;
+  background: #ff004f;
+  transition: width 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+.nav ul li a::after {
+  width: 0;
+  right: 100%;
+}
+
+.content1 {
+  margin-top: 10px;
+  display: flex;
+}
+
+.info {
+  flex: 0 0 80%;
+  padding: 20px;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.image-container {
+  flex: 0 0 27%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 86px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about_me {
+  padding: 10px 119.43px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.ctext {
+  padding-left: 70px;
+}
+
+.ctext ul li {
+  display: inline;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+
+.ctext ul {
+  margin-left: -43px;
+}
+
+/* Content toggle styles */
+.ctext .skills,
+.ctext .experience,
+.ctext .education {
+  display: none;
+}
+
+.ctext .content-visible {
+  display: block;
+}
+
+.ctext ul li a.active {
+  text-decoration: underline;
+  /* Add any additional styles for active link */
+}
+
+#second li a.active {
+  text-decoration: none;
+  /* Remove underline */
+  font-weight: bold;
+  /* Make the text bold */
+}
+
+#second li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+
+#second li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+#second li a:hover::after,
+#second li a.active::after {
+  background-color: #ff004f;
+  /* Color of the underline on hover and when active */
+}
+
+.services {
+  padding: 10px 119.43px;
+  margin-right: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card_container {
+  display: flex;
+  justify-content: space-around;
+  /* Distribute items evenly with equal space around them */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  max-width: 1200px;
+  /* Limit maximum width of the container */
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: darkgray;
+  display: inline-block;
+  align-self: center;
+  width: 20%;
+  padding: 40px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+  /* Transition effect for background color */
+}
+
+.card:hover {
+  background-color: #ff004f;
+  /* Background color change on hover */
+  transform: translateY(-5px) scale(1.05);
+  /* Move the card 5px up and scale by 5% on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Add box-shadow for elevation */
+}
+
+.works {
+  padding: 10px 119.43px;
+  margin-right: 10px;
+
+}
+
+.workcard {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  /* Adjust as needed */
+  height: 360px;
+  /* Adjust as needed */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.work_container {
+  display: flex;
+  justify-content: space-around;
+  /* Distribute items evenly with equal space around them */
+  margin: 0 auto;
+  /* Center the container horizontally */
+
+
+
+}
+
+.workcard:hover {
+  transform: translateY(-5px);
+  /* Lift card slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Enhance shadow on hover */
+}
+
+.workcard img {
+  width: 300px;
+  /* Adjust as needed */
+  height: 360px;
+  /* Maintain aspect ratio */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  /* Adjust as needed */
+  height: 360px;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  background-color: rgba(255, 0, 79, 0.4);
+  /* Semi-transparent pinkish-red background */
+  transition: opacity 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* Text color */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.workcard:hover .content {
+  opacity: 1;
+  /* Show content on hover */
+}
+
+.content p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.btn a {
+  margin: 50px 394px;
+  padding: 14px 50px;
+  border: 1px solid #ff004f;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.btn a:hover {
+  background: #ff004f;
+  transition: background 0.432s;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.contact {
+  padding: 10px 120px;
+  display: flex;
+  justify-content: left;
+
+}
+
+.contact .details {
+  width: 30%;
+}
+
+.material-symbols-outlined {
+  padding: 10px;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24,
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.a1 {
+  display: flex;
+
+}
+
+.addon {
+  padding-top: 10px;
+}
+
+.social img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.cv input {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background-color: #ff004f;
+  color: white;
+  font-size: large;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.contactform {
+
+  padding: 10px;
+}
+
+.contactform input {
+  color: white;
+  background-color: #333;
+
+  height: 51px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+textarea {
+  color: white;
+  background-color: #333;
+
+  width: 800px;
+  height: 30%;
+  /* margin-bottom: 10px; */
+}
+#submit{
+  margin-top: -1px;
+background: #ff004f;
+border-radius: 10px;
+padding:  10px 5px;
+width: 15%;
+height: 20%;
+}
+
+.footer{
+  background-color: #333;
+
+  padding-top: 1px ;
+  padding-bottom: 1px;
+  text-align: center;
+}
