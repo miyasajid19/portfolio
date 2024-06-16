@@ -366,7 +366,6 @@ height: 20%;
   padding-top: 1px ;
   padding-bottom: 1px;
   text-align: center;
-
 }
 @media screen and (max-width: 800px)
 {
@@ -374,6 +373,7 @@ height: 20%;
     margin: 2px;
     padding: 5px;
     font-size: small;
+
   }
 
   .nav {
