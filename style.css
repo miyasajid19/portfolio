@@ -358,7 +358,6 @@ padding:  10px 5px;
 width: 15%;
 height: 20%;
 }
-
 .footer{
   margin: 0;
   background-color: #333;
@@ -366,6 +365,7 @@ height: 20%;
   padding-top: 1px ;
   padding-bottom: 1px;
   text-align: center;
+
 }
 @media screen and (max-width: 800px)
 {
